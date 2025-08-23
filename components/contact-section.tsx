@@ -32,7 +32,10 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-muted/30">
+    <section
+      id="contact"
+      className="py-24 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">
@@ -45,7 +48,7 @@ export function ContactSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="border-2">
+          <Card className="border-2 border-blue-200/50 dark:border-blue-800/50 backdrop-blur-sm bg-white/80 dark:bg-gray-900/80 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-xl hover:border-blue-300/70 dark:hover:border-blue-700/70 transition-all duration-300">
             <CardHeader>
               <CardTitle className="text-2xl font-heading">Send us a message</CardTitle>
               <CardDescription>Fill out the form below and we'll get back to you within 24 hours.</CardDescription>
@@ -103,10 +106,10 @@ export function ContactSection() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-ai-gradient hover:opacity-90 text-white font-semibold group"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold shadow-lg hover:shadow-xl group transition-all duration-300"
                 >
                   Send Message
-                  <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </form>
             </CardContent>
@@ -123,7 +126,7 @@ export function ContactSection() {
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 p-4 rounded-lg border border-blue-200/30 dark:border-blue-800/30 hover:scale-[1.02] hover:shadow-md hover:border-blue-300/50 dark:hover:border-blue-700/50 transition-all duration-300">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
@@ -131,31 +134,55 @@ export function ContactSection() {
                   <h4 className="font-semibold mb-1">Email</h4>
                   <p className="text-muted-foreground">hello@samvitai.com</p>
                 </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="ml-auto bg-transparent"
+                  onClick={() => window.open("mailto:hello@samvitai.com", "_blank")}
+                >
+                  Contact
+                </Button>
               </div>
 
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 p-4 rounded-lg border border-blue-200/30 dark:border-blue-800/30 hover:scale-[1.02] hover:shadow-md hover:border-blue-300/50 dark:hover:border-blue-700/50 transition-all duration-300">
                 <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-secondary" />
+                  <Phone className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Phone</h4>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+91 9980276563</p>
                 </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="ml-auto bg-transparent"
+                  onClick={() => window.open("tel:+15551234567", "_blank")}
+                >
+                  Call
+                </Button>
               </div>
 
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 p-4 rounded-lg border border-blue-200/30 dark:border-blue-800/30 hover:scale-[1.02] hover:shadow-md hover:border-blue-300/50 dark:hover:border-blue-700/50 transition-all duration-300">
                 <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-accent" />
+                  <MapPin className="w-6 h-6 text-green-600 dark:text-green-400" />
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Location</h4>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <p className="text-muted-foreground">103, Yashna Summit, HSR Layout, Bangalore - 560102</p>
                 </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="ml-auto bg-transparent"
+                  onClick={() => window.open("https://maps.google.com/?q=San+Francisco,+CA", "_blank")}
+                >
+                  View
+                </Button>
               </div>
             </div>
 
             {/* Quick Links */}
-            <Card className="bg-primary/5 border-primary/20">
+            <Card className="bg-primary/5 border-2 border-blue-200/50 dark:border-blue-800/50 backdrop-blur-sm hover:scale-[1.02] hover:-translate-y-1 hover:shadow-lg hover:border-blue-300/70 dark:hover:border-blue-700/70 transition-all duration-300">
               <CardContent className="p-6">
                 <h4 className="font-semibold mb-4">Quick Links</h4>
                 <div className="space-y-2">

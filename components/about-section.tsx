@@ -1,3 +1,5 @@
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Brain, Target, Users, Zap } from "lucide-react"
 
@@ -8,27 +10,31 @@ export function AboutSection() {
       title: "AI-First Approach",
       description:
         "We leverage cutting-edge AI technologies to solve complex problems and create innovative solutions.",
+      link: "https://sahasra.ai",
     },
     {
       icon: Target,
       title: "Execution Excellence",
       description:
         "From concept to deployment, we ensure every project meets the highest standards of quality and performance.",
+      link: "https://agentgenix.io",
     },
     {
       icon: Users,
       title: "Partnership Focus",
       description: "We work closely with our clients and partners to deliver solutions that truly make a difference.",
+      link: "https://mastishka.ai",
     },
     {
       icon: Zap,
       title: "Rapid Innovation",
       description: "Speed without compromise - we deliver fast, scalable, and reliable AI products that work.",
+      link: "https://agentgenix.io",
     },
   ]
 
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-24 bg-gradient-to-br from-slate-50 to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">
@@ -52,14 +58,14 @@ export function AboutSection() {
             return (
               <Card
                 key={index}
-                className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                className="text-center border border-purple-200/50 backdrop-blur-sm bg-white/80 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:border-purple-300/70"
               >
                 <CardContent className="p-6">
                   <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <Icon className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-lg font-semibold font-heading mb-3">{value.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">{value.description}</p>
                 </CardContent>
               </Card>
             )

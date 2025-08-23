@@ -20,7 +20,7 @@ export function CorporateLearningSection() {
   ]
 
   return (
-    <section id="corporate-learning" className="py-24 bg-gradient-to-br from-teal-50/50 to-lime-50/30">
+    <section id="corporate-learning" className="py-24 bg-gradient-to-br from-teal-50 via-emerald-50 to-lime-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">
@@ -38,8 +38,8 @@ export function CorporateLearningSection() {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold font-heading text-foreground">Enterprise AI Training Programs</h3>
-              <p className="text-lg text-foreground leading-relaxed">
+              <h3 className="text-2xl font-bold font-heading">Enterprise AI Training Programs</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Transform your organization with cutting-edge AI knowledge. Our comprehensive training programs are
                 designed to equip your teams with the skills needed to leverage AI technologies effectively.
               </p>
@@ -71,16 +71,27 @@ export function CorporateLearningSection() {
               return (
                 <Card
                   key={index}
-                  className="border-2 border-[var(--education-primary)]/20 hover:border-[var(--education-primary)]/50 transition-colors bg-white/80 backdrop-blur-sm"
+                  className="border-2 border-teal-200/50 hover:border-teal-400 hover:shadow-xl hover:scale-105 hover:-translate-y-1 transition-all duration-300 bg-white/80 backdrop-blur-sm group cursor-pointer"
                 >
-                  <CardContent className="flex items-center gap-4 p-6">
-                    <div className="w-12 h-12 rounded-full bg-[var(--education-primary)]/10 flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-[var(--education-primary)]" />
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-full bg-[var(--education-primary)]/10 flex items-center justify-center group-hover:bg-[var(--education-primary)]/20 transition-colors">
+                        <Icon className="w-6 h-6 text-[var(--education-primary)]" />
+                      </div>
+                      <div>
+                        <div className="text-3xl font-bold text-[var(--education-primary)]">{stat.value}</div>
+                        <div className="text-muted-foreground">{stat.label}</div>
+                      </div>
                     </div>
-                    <div>
-                      <div className="text-3xl font-bold text-[var(--education-primary)]">{stat.value}</div>
-                      <div className="text-foreground">{stat.label}</div>
-                    </div>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full border-teal-300 text-teal-700 hover:bg-teal-50 hover:border-teal-400 transition-all duration-200 bg-transparent"
+                      onClick={() => window.open("https://www.mastishka.ai", "_blank")}
+                    >
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
                   </CardContent>
                 </Card>
               )
@@ -89,15 +100,27 @@ export function CorporateLearningSection() {
         </div>
 
         {/* Testimonial placeholder */}
-        <Card className="bg-[var(--education-primary)]/5 border-2 border-[var(--education-primary)]/20">
-          <CardContent className="p-8 text-center">
-            <blockquote className="text-xl italic text-foreground mb-4">
-              "The AI training program transformed our team's capabilities. We're now implementing AI solutions that
-              have increased our productivity by 40%."
-            </blockquote>
-            <div className="text-foreground">
-              <div className="font-semibold">Sarah Johnson</div>
-              <div className="text-muted-foreground">CTO, TechCorp Solutions</div>
+        <Card className="bg-gradient-to-r from-teal-50 to-lime-50 border-2 border-teal-200/50 hover:border-teal-300 hover:shadow-lg transition-all duration-300">
+          <CardContent className="p-8">
+            <div className="text-center mb-6">
+              <blockquote className="text-xl italic text-foreground mb-4">
+                "The AI training program transformed our team's capabilities. We're now implementing AI solutions that
+                have increased our productivity by 40%."
+              </blockquote>
+              <div className="text-muted-foreground">
+                <div className="font-semibold">Rama Krishna</div>
+                <div>CTO, Zaravya Solutions</div>
+              </div>
+            </div>
+            <div className="text-center">
+              <Button
+                variant="outline"
+                className="border-teal-300 text-teal-700 hover:bg-teal-50 hover:border-teal-400 transition-all duration-200 bg-transparent"
+                onClick={() => window.open("https://www.mastishka.ai", "_blank")}
+              >
+                Start Your Training Journey
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
             </div>
           </CardContent>
         </Card>
