@@ -34,11 +34,11 @@ export function AboutSection() {
   ]
 
   return (
-    <section id="about" className="py-24 bg-gradient-to-br from-slate-50 to-purple-50">
+    <section id="about" className="py-24 bg-gradient-to-br from-purple-50 to-indigo-50/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">
-            About <span className="text-ai-gradient">Samvit AI</span>
+            About <span className="text-purple-600">Samvit AI</span>
           </h2>
           <div className="max-w-4xl mx-auto space-y-6">
             <p className="text-xl text-muted-foreground leading-relaxed">
@@ -61,8 +61,8 @@ export function AboutSection() {
                 className="text-center border border-purple-200/50 backdrop-blur-sm bg-white/80 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:border-purple-300/70"
               >
                 <CardContent className="p-6">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Icon className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 mx-auto rounded-full bg-purple-500/10 flex items-center justify-center mb-4">
+                    <Icon className="w-8 h-8 text-purple-500" />
                   </div>
                   <h3 className="text-lg font-semibold font-heading mb-3">{value.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4">{value.description}</p>

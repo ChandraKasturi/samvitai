@@ -2,140 +2,152 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { GraduationCap, Building2, Rocket, ArrowRight } from "lucide-react"
+import { GraduationCap, MessageCircle, Upload, Brain, Target, BarChart3, Globe, ArrowRight } from "lucide-react"
 
 export function ProductsSection() {
-  const products = [
+  const features = [
     {
-      title: "Sahasra AI",
-      subtitle: "Education App",
-      description: "AI-powered learning for students.",
-      note: "Only learning app that students need",
-      icon: GraduationCap,
-      link: "https://sahasra.ai",
-      theme: "education",
-      features: ["Personalized Learning", "AI Tutoring", "Progress Tracking"],
+      title: "Student Chat Assistant",
+      description: "Voice & text chat in English + Indian languages. Get instant answers to your academic questions.",
+      icon: MessageCircle,
+      popular: true,
     },
     {
-      title: "Learning",
-      subtitle: "Corporate Training",
-      description: "Upskill in Generative AI and Agentic Framwworks.",
-      note: "In partnership with Mastishka School of AI.",
-      icon: Building2,
-      link: "https://www.mastishka.ai",
-      theme: "corporate",
-      features: ["Expert Instructors", "Hands-on Projects", "Certification"],
+      title: "Upload & Learn",
+      description:
+        "Ask questions from uploaded documents (PDFs/images). Turn any study material into an interactive learning experience.",
+      icon: Upload,
     },
     {
-      title: "MVP Builds",
-      subtitle: "Rapid Development",
-      description: "Ship customer-ready MVPs in just 2–3 weeks.",
-      note: "Create the app that you always wanted to build",
-      icon: Rocket,
-      link: "https://agentgenix.io",
-      theme: "mvp",
-      features: ["Fast Delivery", "Scalable Architecture", "Production Ready"],
+      title: "Syllabus-Aware Learning",
+      description: "Choose between syllabus-specific responses or open learning mode for broader knowledge.",
+      icon: Brain,
+    },
+    {
+      title: "Smart Assessments",
+      description:
+        "MCQs, fill-in-the-blanks, short answers with review tools. Track your progress and identify areas for improvement.",
+      icon: Target,
+    },
+    {
+      title: "AI Study Planner",
+      description: "Personalized study plans based on your goals, available time, and learning pace.",
+      icon: BarChart3,
+    },
+    {
+      title: "Multilingual Support",
+      description:
+        "English + regional languages (Hindi, Tamil, Telugu, and more). Learn in the language you're most comfortable with.",
+      icon: Globe,
     },
   ]
 
   return (
-    <section id="products" className="py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
+    <section id="products" className="py-24 bg-gradient-to-br from-purple-50 to-indigo-50/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold font-serif mb-6">
-            Our <span className="text-primary-gradient">Offerings</span>
+            Meet <span className="text-primary-gradient">Sahasra</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive AI solutions designed to transform how you learn, build, and scale.
+            Your AI Student Buddy - Smart learning powered by AI for every Indian student. Personalized learning,
+            assessments, and study planning tailored to your syllabus.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {products.map((product, index) => {
-            const Icon = product.icon
-            return (
-              <Card
-                key={product.title}
-                className={`group relative overflow-hidden border-2 border-gray-200/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] ${
-                  product.theme === "education"
-                    ? "hover:border-teal-400 hover:shadow-teal-500/25 hover:bg-teal-50/30"
-                    : product.theme === "mvp"
-                      ? "hover:border-cyan-400 hover:shadow-cyan-500/25 hover:bg-cyan-50/30"
-                      : "hover:border-blue-500 hover:shadow-blue-600/25 hover:bg-blue-50/30"
-                } backdrop-blur-sm bg-white/80`}
+        <div className="max-w-4xl mx-auto mb-16">
+          <Card className="group relative overflow-hidden border-2 border-purple-200/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:scale-[1.02] hover:border-purple-400 hover:shadow-purple-500/25 hover:bg-purple-50/30 backdrop-blur-sm bg-white/80">
+            <CardHeader className="text-center pb-6">
+              <div className="w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6 bg-purple-500/10">
+                <GraduationCap className="w-10 h-10 text-purple-500" />
+              </div>
+              <CardTitle className="text-4xl font-serif mb-2">Sahasra AI</CardTitle>
+              <CardDescription className="text-xl font-medium text-muted-foreground">
+                Your AI Student Buddy
+              </CardDescription>
+            </CardHeader>
+
+            <CardContent className="text-center space-y-8">
+              <p className="text-foreground text-xl leading-relaxed">
+                The only learning app that students need. Supporting multiple Indian education boards and languages with
+                personalized AI-powered learning.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="text-center p-4 rounded-lg bg-purple-50/50">
+                  <div className="text-3xl font-bold text-purple-600 mb-1">₹0</div>
+                  <div className="text-sm text-muted-foreground">Free Plan Available</div>
+                </div>
+                <div className="text-center p-4 rounded-lg bg-purple-50/50">
+                  <div className="text-3xl font-bold text-purple-600 mb-1">10+</div>
+                  <div className="text-sm text-muted-foreground">Indian Languages</div>
+                </div>
+              </div>
+
+              <Button
+                className="w-full max-w-md mx-auto group relative overflow-hidden transition-all duration-300 bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 border-0 text-white font-semibold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+                onClick={() => window.open("https://sahasra.ai", "_blank", "noopener,noreferrer")}
               >
-                <CardHeader className="text-center pb-4">
-                  <div
-                    className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 ${
-                      product.theme === "education"
-                        ? "bg-teal-500/10"
-                        : product.theme === "mvp"
-                          ? "bg-cyan-500/10"
-                          : "bg-blue-600/10"
-                    }`}
-                  >
-                    <Icon
-                      className={`w-8 h-8 ${
-                        product.theme === "education"
-                          ? "text-teal-500"
-                          : product.theme === "mvp"
-                            ? "text-cyan-500"
-                            : "text-blue-600"
-                      }`}
-                    />
-                  </div>
-                  <CardTitle className="text-2xl font-serif">{product.title}</CardTitle>
-                  <CardDescription className="text-lg font-medium text-muted-foreground">
-                    {product.subtitle}
-                  </CardDescription>
-                </CardHeader>
+                <span className="relative z-10">Start Learning with Sahasra</span>
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
+                <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
 
-                <CardContent className="text-center space-y-6">
-                  <p className="text-foreground text-lg leading-relaxed">{product.description}</p>
+        <div className="mb-12">
+          <h3 className="text-2xl md:text-3xl font-bold font-serif text-center mb-12">
+            Everything you need to <span className="text-purple-600">excel</span>
+          </h3>
 
-                  {product.note && <p className="text-sm text-muted-foreground italic">{product.note}</p>}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, index) => {
+              const Icon = feature.icon
+              return (
+                <Card
+                  key={feature.title}
+                  className="group relative overflow-hidden border-2 border-purple-100/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-purple-300 hover:shadow-purple-500/20 backdrop-blur-sm bg-white/90"
+                >
+                  {feature.popular && (
+                    <div className="absolute top-4 right-4 bg-purple-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                      Popular
+                    </div>
+                  )}
 
-                  <div className="space-y-2">
-                    {product.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                        <div
-                          className={`w-1.5 h-1.5 rounded-full ${
-                            product.theme === "education"
-                              ? "bg-teal-500"
-                              : product.theme === "mvp"
-                                ? "bg-cyan-500"
-                                : "bg-blue-600"
-                          }`}
-                        ></div>
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
+                  <CardHeader className="pb-4">
+                    <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-purple-500/10">
+                      <Icon className="w-6 h-6 text-purple-500" />
+                    </div>
+                    <CardTitle className="text-lg font-serif">{feature.title}</CardTitle>
+                  </CardHeader>
 
-                  <Button
-                    className={`w-full group relative overflow-hidden transition-all duration-300 ${
-                      product.theme === "education"
-                        ? "bg-gradient-to-r from-teal-500 to-lime-500 hover:from-teal-600 hover:to-lime-600 border-0"
-                        : product.theme === "mvp"
-                          ? "bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 border-0"
-                          : "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 border-0"
-                    } text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105`}
-                    onClick={() => window.open(product.link, "_blank", "noopener,noreferrer")}
-                  >
-                    <span className="relative z-10">
-                      {product.theme === "education"
-                        ? "Explore Learning"
-                        : product.theme === "mvp"
-                          ? "Start Building"
-                          : "Learn More"}
-                    </span>
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
-                    <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                  </Button>
-                </CardContent>
-              </Card>
-            )
-          })}
+                  <CardContent>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              )
+            })}
+          </div>
+        </div>
+
+        <div className="text-center">
+          <p className="text-lg text-muted-foreground mb-6">Join thousands of students already learning with Sahasra</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              variant="outline"
+              className="border-purple-500 text-purple-600 hover:bg-purple-50 bg-transparent"
+              onClick={() => window.open("https://sahasra.ai/signup", "_blank", "noopener,noreferrer")}
+            >
+              Sign Up Free
+            </Button>
+            <Button
+              className="bg-purple-600 hover:bg-purple-700"
+              onClick={() => window.open("https://sahasra.ai", "_blank", "noopener,noreferrer")}
+            >
+              Learn More
+            </Button>
+          </div>
         </div>
       </div>
     </section>

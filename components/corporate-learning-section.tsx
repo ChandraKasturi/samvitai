@@ -20,11 +20,11 @@ export function CorporateLearningSection() {
   ]
 
   return (
-    <section id="corporate-learning" className="py-24 bg-gradient-to-br from-teal-50 via-emerald-50 to-lime-50">
+    <section id="corporate-learning" className="py-24 bg-gradient-to-br from-purple-50 to-indigo-50/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">
-            Learning that <span style={{ color: "var(--education-primary)" }}>Transforms Teams</span>
+            Learning that <span className="text-purple-600">Transforms Teams</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
             Partnering with Mastishka School of AI to deliver world-class AI programs.
@@ -48,7 +48,7 @@ export function CorporateLearningSection() {
             <div className="space-y-4">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-[var(--education-primary)] flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0" />
                   <span className="text-foreground">{benefit}</span>
                 </div>
               ))}
@@ -56,7 +56,7 @@ export function CorporateLearningSection() {
 
             <Button
               size="lg"
-              className="bg-[var(--education-primary)] hover:bg-[var(--education-primary)]/90 text-white px-8 py-4 text-lg font-semibold group"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg font-semibold group"
               onClick={() => window.open("https://www.mastishka.ai", "_blank")}
             >
               Explore Training Programs
@@ -71,22 +71,22 @@ export function CorporateLearningSection() {
               return (
                 <Card
                   key={index}
-                  className="border-2 border-teal-200/50 hover:border-teal-400 hover:shadow-xl hover:scale-105 hover:-translate-y-1 transition-all duration-300 bg-white/80 backdrop-blur-sm group cursor-pointer"
+                  className="border-2 border-purple-200/50 hover:border-purple-400 hover:shadow-xl hover:scale-105 hover:-translate-y-1 transition-all duration-300 bg-white/80 backdrop-blur-sm group cursor-pointer"
                 >
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-full bg-[var(--education-primary)]/10 flex items-center justify-center group-hover:bg-[var(--education-primary)]/20 transition-colors">
-                        <Icon className="w-6 h-6 text-[var(--education-primary)]" />
+                      <div className="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
+                        <Icon className="w-6 h-6 text-purple-500" />
                       </div>
                       <div>
-                        <div className="text-3xl font-bold text-[var(--education-primary)]">{stat.value}</div>
+                        <div className="text-3xl font-bold text-purple-600">{stat.value}</div>
                         <div className="text-muted-foreground">{stat.label}</div>
                       </div>
                     </div>
                     <Button
                       variant="outline"
                       size="sm"
-                      className="w-full border-teal-300 text-teal-700 hover:bg-teal-50 hover:border-teal-400 transition-all duration-200 bg-transparent"
+                      className="w-full border-purple-300 text-purple-700 hover:bg-purple-50 hover:border-purple-400 transition-all duration-200 bg-transparent"
                       onClick={() => window.open("https://www.mastishka.ai", "_blank")}
                     >
                       Learn More
@@ -100,7 +100,7 @@ export function CorporateLearningSection() {
         </div>
 
         {/* Testimonial placeholder */}
-        <Card className="bg-gradient-to-r from-teal-50 to-lime-50 border-2 border-teal-200/50 hover:border-teal-300 hover:shadow-lg transition-all duration-300">
+        <Card className="bg-gradient-to-r from-purple-50 to-indigo-50 border-2 border-purple-200/50 hover:border-purple-300 hover:shadow-lg transition-all duration-300">
           <CardContent className="p-8">
             <div className="text-center mb-6">
               <blockquote className="text-xl italic text-foreground mb-4">
@@ -115,7 +115,7 @@ export function CorporateLearningSection() {
             <div className="text-center">
               <Button
                 variant="outline"
-                className="border-teal-300 text-teal-700 hover:bg-teal-50 hover:border-teal-400 transition-all duration-200 bg-transparent"
+                className="border-purple-300 text-purple-700 hover:bg-purple-50 hover:border-purple-400 transition-all duration-200 bg-transparent"
                 onClick={() => window.open("https://www.mastishka.ai", "_blank")}
               >
                 Start Your Training Journey

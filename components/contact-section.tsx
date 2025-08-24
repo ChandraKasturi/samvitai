@@ -32,14 +32,11 @@ export function ContactSection() {
   }
 
   return (
-    <section
-      id="contact"
-      className="py-24 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900"
-    >
+    <section id="contact" className="py-24 bg-gradient-to-br from-purple-50 to-indigo-50/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">
-            Get in <span className="text-ai-gradient">Touch</span>
+            Get in <span className="text-purple-600">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to transform your ideas into AI-powered solutions? Let's start the conversation.
@@ -48,7 +45,7 @@ export function ContactSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="border-2 border-blue-200/50 dark:border-blue-800/50 backdrop-blur-sm bg-white/80 dark:bg-gray-900/80 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-xl hover:border-blue-300/70 dark:hover:border-blue-700/70 transition-all duration-300">
+          <Card className="border-2 border-purple-200/50 backdrop-blur-sm bg-white/80 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-xl hover:border-purple-300/70 transition-all duration-300">
             <CardHeader>
               <CardTitle className="text-2xl font-heading">Send us a message</CardTitle>
               <CardDescription>Fill out the form below and we'll get back to you within 24 hours.</CardDescription>
@@ -106,7 +103,7 @@ export function ContactSection() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold shadow-lg hover:shadow-xl group transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold shadow-lg hover:shadow-xl group transition-all duration-300"
                 >
                   Send Message
                   <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -126,9 +123,9 @@ export function ContactSection() {
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4 p-4 rounded-lg border border-blue-200/30 dark:border-blue-800/30 hover:scale-[1.02] hover:shadow-md hover:border-blue-300/50 dark:hover:border-blue-700/50 transition-all duration-300">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-primary" />
+              <div className="flex items-start gap-4 p-4 rounded-lg border border-purple-200/30 hover:scale-[1.02] hover:shadow-md hover:border-purple-300/50 transition-all duration-300">
+                <div className="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-purple-500" />
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Email</h4>
@@ -144,9 +141,9 @@ export function ContactSection() {
                 </Button>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-lg border border-blue-200/30 dark:border-blue-800/30 hover:scale-[1.02] hover:shadow-md hover:border-blue-300/50 dark:hover:border-blue-700/50 transition-all duration-300">
-                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+              <div className="flex items-start gap-4 p-4 rounded-lg border border-purple-200/30 hover:scale-[1.02] hover:shadow-md hover:border-purple-300/50 transition-all duration-300">
+                <div className="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-6 h-6 text-purple-500" />
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Phone</h4>
@@ -162,9 +159,9 @@ export function ContactSection() {
                 </Button>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-lg border border-blue-200/30 dark:border-blue-800/30 hover:scale-[1.02] hover:shadow-md hover:border-blue-300/50 dark:hover:border-blue-700/50 transition-all duration-300">
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-green-600 dark:text-green-400" />
+              <div className="flex items-start gap-4 p-4 rounded-lg border border-purple-200/30 hover:scale-[1.02] hover:shadow-md hover:border-purple-300/50 transition-all duration-300">
+                <div className="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-purple-500" />
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Location</h4>
@@ -182,7 +179,7 @@ export function ContactSection() {
             </div>
 
             {/* Quick Links */}
-            <Card className="bg-primary/5 border-2 border-blue-200/50 dark:border-blue-800/50 backdrop-blur-sm hover:scale-[1.02] hover:-translate-y-1 hover:shadow-lg hover:border-blue-300/70 dark:hover:border-blue-700/70 transition-all duration-300">
+            <Card className="bg-purple-500/5 border-2 border-purple-200/50 backdrop-blur-sm hover:scale-[1.02] hover:-translate-y-1 hover:shadow-lg hover:border-purple-300/70 transition-all duration-300">
               <CardContent className="p-6">
                 <h4 className="font-semibold mb-4">Quick Links</h4>
                 <div className="space-y-2">

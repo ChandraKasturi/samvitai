@@ -42,13 +42,13 @@ export function Navigation() {
                 onClick={() => scrollToSection("corporate-learning")}
                 className="text-white/90 hover:text-blue-300 transition-colors font-medium"
               >
-                Corporate Learning
+                AI Learning
               </button>
               <button
                 onClick={() => scrollToSection("mvp-builds")}
                 className="text-white/90 hover:text-blue-300 transition-colors font-medium"
               >
-                MVP Builds
+                MVP
               </button>
               <button
                 onClick={() => scrollToSection("about")}
