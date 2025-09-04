@@ -94,7 +94,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-slate-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-slate-400 text-sm">© 2025 Samvit AI. All rights reserved.</p>
+          <p className="text-slate-400 text-sm">© 2025 Samvit AI Solutions Private Limited. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
               Privacy Policy
