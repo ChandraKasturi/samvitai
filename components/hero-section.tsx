@@ -46,9 +46,9 @@ export function HeroSection() {
             <Button
               size="lg"
               className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-8 py-4 text-lg font-semibold group"
-              onClick={() => window.open("https://sahasra.ai", "_blank")}
+              onClick={() => window.open("https://notutor.ai", "_blank")}
             >
-              Explore Sahasra AI
+              Explore NoTutor
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
 
